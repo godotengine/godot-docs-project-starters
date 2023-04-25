@@ -1,0 +1,33 @@
+name: Build ZIP archives
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Generate ZIP archives for project starts and assets and upload them as a release
+    runs-on: ubuntu-20.04
+    env:
+      release_tag: 'latest-4.x'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get -qq update
+          sudo apt-get -qq install zip unzip
+
+      - name: Create ZIPs
+        run: |
+          mkdir ./.build
+          find ./src -mindepth 1 -maxdepth 1 -type d -execdir zip -r '../.build/{}.zip' '{}' \;
+
+      - name: Publish archives as a '${{ env.release_tag }}' draft release
+        run: gh release upload --clobber ${{ env.release_tag }} ./build/*
+
+      - name: Push tag '${{ env.release_tag }}' forward
+        run: |
+          git tag ${{ env.release_tag }}
+          git push origin +${{ env.release_tag }}
