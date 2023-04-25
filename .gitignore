@@ -1,0 +1,15 @@
+# macOS system files
+.DS_Store
+__MACOSX
+
+# Windows system files
+[Tt]humbs.db
+[Tt]humbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Code editor meta files
+.vs/
+.vscode/
+*.swo
+*.swp
