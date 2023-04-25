@@ -30,7 +30,7 @@ jobs:
           mkdir ./.build
           find ./src -mindepth 1 -maxdepth 1 -type d -execdir zip -r '../.build/{}.zip' '{}' \;
 
-      - name: Publish archives as a '${{ env.release_tag }}' draft release
+      - name: Publish archives as a '${{ env.release_tag }}' release
         run: gh release upload --clobber ${{ env.release_tag }} ./.build/*
 
       - name: Push tag '${{ env.release_tag }}' forward
