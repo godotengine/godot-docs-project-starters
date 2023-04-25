@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dugbflh5on07l"]
+
+[ext_resource type="Script" path="res://rotate_and_move_mouse.gd" id="1_14d5y"]
+[ext_resource type="Texture2D" uid="uid://cxhki5gsl6umc" path="res://icon.svg" id="2_dou2p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sb80o"]
+size = Vector2(126, 128)
+
+[node name="RotateAndMoveMouse" type="CharacterBody2D"]
+position = Vector2(568, 315)
+motion_mode = 1
+script = ExtResource("1_14d5y")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_dou2p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sb80o")

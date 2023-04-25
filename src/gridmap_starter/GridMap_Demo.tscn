@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://MeshLibrary.tres" type="MeshLibrary" id=1]
+
+[node name="GridMap_Demo" type="GridMap" index="0"]
+
+theme = ExtResource( 1 )
+cell_size = Vector3( 2, 2, 2 )
+cell_octant_size = 8
+cell_center_x = true
+cell_center_y = false
+cell_center_z = true
+cell_scale = 1.0
+collision_layer = 1
+collision_mask = 1
+data = {
+"cells": PoolIntArray( 65534, 0, 12, 65534, 1, 12, 65534, 2, 12, 65534, 3, 12, 65533, 4, 8, 65534, 4, 0, 65535, 4, 1441800, 131071, 4, 1114124, 196607, 4, 1114124, 262143, 4, 1114124, 65533, 5, 1048584, 65534, 5, 655362, 65535, 5, 655368, 131071, 5, 1114124, 196607, 5, 1114124, 262143, 5, 1114124, 65534, 65535, 10 )
+}
+_sections_unfolded = [ "Cell", "Collision" ]
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( -1, 0, 0 )
+}
+
+[node name="DirectionalLight" type="DirectionalLight" parent="." index="0"]
+
+transform = Transform( 0.0358735, 0.482339, -0.87525, -0.0197528, 0.875985, 0.481934, 0.999161, 0, 0.0409521, -17.3353, 4.27635, 2.5183 )
+layers = 1
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 1.0
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.1
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+directional_shadow_mode = 2
+directional_shadow_split_1 = 0.1
+directional_shadow_split_2 = 0.2
+directional_shadow_split_3 = 0.5
+directional_shadow_blend_splits = false
+directional_shadow_normal_bias = 0.8
+directional_shadow_bias_split_scale = 0.25
+directional_shadow_depth_range = 0
+directional_shadow_max_distance = 200.0
+
+

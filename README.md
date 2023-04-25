@@ -10,7 +10,7 @@ All contributors are welcome to help on the Godot documentation. Please familiar
 2. [Content guidelines](https://docs.godotengine.org/en/latest/contributing/documentation/content_guidelines.html)
 3. [Writing guidelines](https://docs.godotengine.org/en/latest/contributing/documentation/docs_writing_guidelines.html)
 
-GDScript sources in this repository must follow the [GDScript style guide](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html). Assets in this repository must be compatible with the license of the repository.
+GDScript sources in this repository must follow the [GDScript style guide](https://docs.godotengine.org/en/latest/tutorials/scripting/gdscript/gdscript_styleguide.html). Assets in this repository must be compatible with the license of the repository.
 
 ## License
 

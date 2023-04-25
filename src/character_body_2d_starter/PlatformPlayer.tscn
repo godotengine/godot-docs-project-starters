@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://PlatformPlayer.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8, 12 )
+
+[node name="PlatformPlayer" type="KinematicBody2D"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 13
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+run_speed = 100
+jump_speed = -400
+gravity = 1200
+
+[node name="Polygon2D" type="Polygon2D" parent="." index="0"]
+
+polygon = PoolVector2Array( -8, -12, 8, -12, 8, 12, -8, 12 )
+uv = PoolVector2Array(  )
+color = Color( 1, 1, 1, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
+
+position = Vector2( 0, 5 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 0.3, 0.3 )
+limit_left = -75
+limit_top = 50
+limit_right = 725
+limit_bottom = 550
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.1
+drag_margin_top = 0.1
+drag_margin_right = 0.1
+drag_margin_bottom = 0.1
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Drag Margin", "Limit" ]
+
+
