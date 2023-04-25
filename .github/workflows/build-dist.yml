@@ -3,11 +3,17 @@ on:
   push:
   workflow_dispatch:
 
+# Make sure jobs cannot overlap.
+concurrency:
+    group: build-dist-ci
+    cancel-in-progress: true
+
 jobs:
   build:
     name: Generate ZIP archives for project starts and assets and upload them as a release
     runs-on: ubuntu-20.04
     env:
+      GH_TOKEN: ${{ github.token }}
       release_tag: 'latest-4.x'
 
     steps:
