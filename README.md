@@ -5,7 +5,7 @@ This repository contains project files and assets used by tutorials in the [Godo
 They can be referenced in the documentation using the normal RST link syntax:
 
 ```rst
-   `file_name.zip <https://github.com/godotengine/godot-docs-project-starters/releases/download/latest-4.x/file_name.zip>`_
+`file_name.zip <https://github.com/godotengine/godot-docs-project-starters/releases/download/latest-4.x/file_name.zip>`_
 ```
 
 ## Contributing
