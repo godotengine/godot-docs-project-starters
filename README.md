@@ -1,6 +1,12 @@
 # Godot Engine documentation project starters
 
-This repository contains project files and assets used by tutorials in the [Godot Engine](https://godotengine.org)'s documentation.
+This repository contains project files and assets used by tutorials in the [Godot Engine](https://godotengine.org)'s [documentation](https://github.com/godotengine/godot-docs/).
+
+They can be referenced in the documentation using the normal RST link syntax:
+
+```rst
+   `file_name.zip <https://github.com/godotengine/godot-docs-project-starters/releases/download/latest-4.x/file_name.zip>`_
+```
 
 ## Contributing
 
