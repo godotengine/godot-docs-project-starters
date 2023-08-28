@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://3wtg30baumld"]
+
+[ext_resource type="Script" path="res://basic_movement.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bguqcw3nf1n7" path="res://icon.svg" id="2_eod2d"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(280, 20)
+
+[node name="BasicMovement" type="Node"]
+
+[node name="KinematicBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(536, 288)
+script = ExtResource("1")
+
+[node name="Sprite" type="Sprite2D" parent="KinematicBody2D"]
+position = Vector2(-7.1466e-05, 4.41372e-05)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_eod2d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2(-6.10352e-05, 3.05176e-05)
+shape = SubResource("1")
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="Wall" type="StaticBody2D" parent="Walls"]
+position = Vector2(790, 100)
+
+[node name="Polygon2D" type="Polygon2D" parent="Walls/Wall"]
+polygon = PackedVector2Array(-139.29, -10.3625, -139.29, 9.63754, 140.71, 9.63754, 140.71, -10.3625)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall"]
+position = Vector2(1, 0)
+shape = SubResource("2")
+
+[node name="Wall2" type="StaticBody2D" parent="Walls"]
+position = Vector2(250, 510)
+
+[node name="Polygon2D" type="Polygon2D" parent="Walls/Wall2"]
+polygon = PackedVector2Array(-139.29, -10.3625, -139.29, 9.63754, 140.71, 9.63754, 140.71, -10.3625)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall2"]
+position = Vector2(1, 0)
+shape = SubResource("2")
+
+[node name="Wall3" type="StaticBody2D" parent="Walls"]
+position = Vector2(240, 210)
+rotation = 1.5708
+
+[node name="Polygon2D" type="Polygon2D" parent="Walls/Wall3"]
+polygon = PackedVector2Array(-139.29, -10.3625, -139.29, 9.63754, 140.71, 9.63754, 140.71, -10.3625)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall3"]
+position = Vector2(1.00003, -0.00050354)
+shape = SubResource("2")
+
+[node name="Wall4" type="StaticBody2D" parent="Walls"]
+position = Vector2(844.578, 387.906)
+rotation = -0.785398
+
+[node name="Polygon2D" type="Polygon2D" parent="Walls/Wall4"]
+polygon = PackedVector2Array(-139.29, -10.3625, -139.29, 9.63754, 140.71, 9.63754, 140.71, -10.3625)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Wall4"]
+position = Vector2(0.939087, -0.00012207)
+shape = SubResource("2")
