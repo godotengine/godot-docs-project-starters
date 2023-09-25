@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1qnr7iky2k6f"]
+
+[ext_resource type="PackedScene" uid="uid://b7leymer5mvxe" path="res://platform_player.tscn" id="1"]
+
+[node name="PlatformGame" type="Node"]
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls"]
+position = Vector2(485.296, 379.731)
+
+[node name="Polygon2D" type="Polygon2D" parent="Walls/StaticBody2D"]
+color = Color(0.341461, 0.523438, 0.34857, 1)
+polygon = PackedVector2Array(-435.83, 105.853, -388.346, 74.7186, -86.0178, 74.7186, -32.3343, 50.5918, 9.76965, 11.9966, 68.5397, 12.8737, 72.0483, 64.6264, 26.4358, 104.976)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls/StaticBody2D"]
+polygon = PackedVector2Array(-436.296, 106.269, -388.296, 75.269, -86.296, 75.269, -33.1687, 51.2337, 10.564, 12.5471, 68.704, 13.269, 71.704, 64.269, 26.704, 105.269)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Walls"]
+position = Vector2(491.464, 318.057)
+
+[node name="Polygon2D" type="Polygon2D" parent="Walls/StaticBody2D2"]
+color = Color(0.341461, 0.523438, 0.34857, 1)
+polygon = PackedVector2Array(-330.327, 94.9664, -340.98, 82.6316, -113.906, 86.5563, -127.923, 96.6485)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls/StaticBody2D2"]
+polygon = PackedVector2Array(-328.645, 96.0878, -341.217, 83.0776, -114.513, 86.9529, -126.802, 97.2092)
+
+[node name="PlatformPlayer" parent="." instance=ExtResource("1")]
+position = Vector2(393.654, 427.999)

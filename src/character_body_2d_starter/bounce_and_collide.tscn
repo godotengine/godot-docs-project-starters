@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfet1cgypfom2"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_6jxo0"]
+[ext_resource type="Texture2D" uid="uid://cwhah7m5urcoe" path="res://assets/soldier1_gun.png" id="2_wnpta"]
+[ext_resource type="PackedScene" uid="uid://bucigqlq6k64b" path="res://wall.tscn" id="3_wrjm7"]
+
+[sub_resource type="CircleShape2D" id="1"]
+radius = 22.0227
+
+[node name="BounceandCollide" type="Node"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(350, 139)
+script = ExtResource("1_6jxo0")
+
+[node name="Sprite" type="Sprite2D" parent="Player"]
+texture = ExtResource("2_wnpta")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-5, 0)
+shape = SubResource("1")
+
+[node name="Muzzle" type="Marker2D" parent="Player"]
+position = Vector2(28, 8)
+
+[node name="Label" type="Label" parent="Player"]
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="Wall" parent="Walls" instance=ExtResource("3_wrjm7")]
+
+[node name="Wall2" parent="Walls" instance=ExtResource("3_wrjm7")]
+position = Vector2(668, 85)
+
+[node name="Wall3" parent="Walls" instance=ExtResource("3_wrjm7")]
+position = Vector2(827.828, 263.748)
+rotation = 1.5708
+
+[node name="Wall4" parent="Walls" instance=ExtResource("3_wrjm7")]
+position = Vector2(231.425, 302.296)
+rotation = 1.5708
