@@ -3,5 +3,5 @@ extends Control
 func _ready():
 	pass
 
-func _on_Button_pressed():
+func _on_button_pressed():
 	pass # replace with function body
