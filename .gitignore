@@ -18,3 +18,6 @@ ehthumbs_vista.db
 .vscode/
 *.swo
 *.swp
+
+# Jetbrains IDE files
+.idea/
