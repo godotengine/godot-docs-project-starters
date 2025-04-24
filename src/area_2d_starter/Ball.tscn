@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cem8bb7lkb7sr"]
 
-[ext_resource type="Script" path="res://Ball.gd" id="1"]
+[ext_resource type="Script" uid="uid://d014236dj2b82" path="res://Ball.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://b2bimjy3075py" path="res://assets/ballBlue_09.png" id="2"]
 
 [sub_resource type="PhysicsMaterial" id="2"]

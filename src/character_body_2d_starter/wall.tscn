@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bucigqlq6k64b"]
 
-[ext_resource type="Script" path="res://wall.gd" id="1"]
+[ext_resource type="Script" uid="uid://c4m7x7dhs5iqb" path="res://wall.gd" id="1"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(340, 20)
@@ -23,7 +23,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fphgc"]
 _data = {
-"flash": SubResource("2")
+&"flash": SubResource("2")
 }
 
 [node name="Wall" type="StaticBody2D"]

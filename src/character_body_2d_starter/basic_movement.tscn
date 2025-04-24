@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://3wtg30baumld"]
 
-[ext_resource type="Script" path="res://basic_movement.gd" id="1"]
+[ext_resource type="Script" uid="uid://bwyhkumroutlg" path="res://basic_movement.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://bguqcw3nf1n7" path="res://icon.svg" id="2_eod2d"]
 
 [sub_resource type="RectangleShape2D" id="1"]
