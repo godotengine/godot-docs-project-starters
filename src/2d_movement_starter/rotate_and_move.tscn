@@ -1,19 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://bp3xg7tt6xx34"]
+[gd_scene format=3 uid="uid://bp3xg7tt6xx34"]
 
-[ext_resource type="Script" path="res://rotate_and_move.gd" id="1_mhtxi"]
+[ext_resource type="Script" uid="uid://c66thyj32ae6c" path="res://rotate_and_move.gd" id="1_mhtxi"]
 [ext_resource type="Texture2D" uid="uid://cxhki5gsl6umc" path="res://icon.svg" id="2_1tsi0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sb80o"]
 size = Vector2(126, 128)
 
-[node name="RotateAndMove" type="CharacterBody2D"]
+[node name="RotateAndMove" type="CharacterBody2D" unique_id=1295611108]
 position = Vector2(568, 315)
 motion_mode = 1
 script = ExtResource("1_mhtxi")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=697067154]
 texture = ExtResource("2_1tsi0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=316000780]
 shape = SubResource("RectangleShape2D_sb80o")

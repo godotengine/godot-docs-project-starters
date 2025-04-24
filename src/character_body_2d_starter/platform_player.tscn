@@ -1,22 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7leymer5mvxe"]
+[gd_scene format=3 uid="uid://b7leymer5mvxe"]
 
-[ext_resource type="Script" path="res://platform_player.gd" id="1"]
+[ext_resource type="Script" uid="uid://bq3tpdjli8ksn" path="res://platform_player.gd" id="1"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(16, 24)
 
-[node name="PlatformPlayer" type="CharacterBody2D"]
+[node name="PlatformPlayer" type="CharacterBody2D" unique_id=428095652]
 collision_layer = 2
 collision_mask = 13
 script = ExtResource("1")
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=797163910]
 polygon = PackedVector2Array(-8, -12, 8, -12, 8, 12, -8, 12)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1865289343]
 shape = SubResource("1")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=217253495]
 position = Vector2(0, 5)
 zoom = Vector2(1.6, 1.6)
 limit_left = -75

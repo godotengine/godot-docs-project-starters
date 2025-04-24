@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cem8bb7lkb7sr"]
+[gd_scene format=3 uid="uid://cem8bb7lkb7sr"]
 
-[ext_resource type="Script" path="res://Ball.gd" id="1"]
+[ext_resource type="Script" uid="uid://d014236dj2b82" path="res://Ball.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://b2bimjy3075py" path="res://assets/ballBlue_09.png" id="2"]
 
 [sub_resource type="PhysicsMaterial" id="2"]
@@ -10,18 +10,18 @@ bounce = 0.25
 [sub_resource type="CircleShape2D" id="1"]
 radius = 14.8321
 
-[node name="Ball" type="RigidBody2D"]
+[node name="Ball" type="RigidBody2D" unique_id=1876801541]
 physics_material_override = SubResource("2")
 gravity_scale = 5.0
 script = ExtResource("1")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1744188869]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1750652821]
 shape = SubResource("1")
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=291503856]
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
