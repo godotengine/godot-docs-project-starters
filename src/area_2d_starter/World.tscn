@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cwghg4um8ohpo"]
 
-[ext_resource type="Script" path="res://World.gd" id="1"]
+[ext_resource type="Script" uid="uid://8etjs6exwgko" path="res://World.gd" id="1"]
 [ext_resource type="FontFile" uid="uid://sjnahvlt0cil" path="res://assets/Roboto-Bold.ttf" id="2"]
 
 [sub_resource type="RectangleShape2D" id="2"]

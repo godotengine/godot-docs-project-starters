@@ -1,44 +1,36 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://be67oi6w88iur"]
 
-[ext_resource type="Script" path="res://bullet.gd" id="1"]
+[ext_resource type="Script" uid="uid://w46jpub0dw58" path="res://bullet.gd" id="1"]
 
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 3, 3 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(6, 6)
 
 [node name="Bullet" type="KinematicBody2D"]
-
 input_pickable = false
 collision_layer = 16
 collision_mask = 8
 collision/safe_margin = 0.08
-script = ExtResource( 1 )
-_sections_unfolded = [ "Collision" ]
+script = ExtResource("1")
+_sections_unfolded = ["Collision"]
 
 [node name="Polygon2D" type="Polygon2D" parent="." index="0"]
-
-polygon = PoolVector2Array( -3, -3, 3, -3, 3, 3, -3, 3 )
-uv = PoolVector2Array(  )
-color = Color( 1, 1, 1, 1 )
-vertex_colors = PoolColorArray(  )
-offset = Vector2( 0, 0 )
+polygon = PackedVector2Array(-3, -3, 3, -3, 3, 3, -3, 3)
+uv = PackedVector2Array()
+color = Color(1, 1, 1, 1)
+vertex_colors = PackedColorArray()
+offset = Vector2(0, 0)
 antialiased = false
 texture = null
-texture_offset = Vector2( 0, 0 )
-texture_scale = Vector2( 1, 1 )
+texture_offset = Vector2(0, 0)
+texture_scale = Vector2(1, 1)
 texture_rotation_degrees = 0.0
 invert_enable = false
 invert_border = 100.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
-
-shape = SubResource( 1 )
+shape = SubResource("1")
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="2"]
-
-rect = Rect2( -3, -3, 6, 6 )
+rect = Rect2(-3, -3, 6, 6)
 
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
-
-
