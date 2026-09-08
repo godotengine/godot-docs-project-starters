@@ -12,13 +12,27 @@ config_version=5
 
 config/name="Squash the Creeps (3D)"
 config/description="In this game, your goal is to chase and kick out the creeps!"
-config/features=PackedStringArray("4.2")
+config/features=PackedStringArray("4.7")
 config/icon="res://icon.webp"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [filesystem]
 
 import/blender/enabled=false
 
+[input_devices]
+
+joypads/ignore_joypad_on_unfocused_application=true
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
 [rendering]
 
+rendering_device/driver.windows="d3d12"
 anti_aliasing/quality/msaa_3d=2

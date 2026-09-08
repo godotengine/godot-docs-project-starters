@@ -12,8 +12,13 @@ config_version=5
 
 config/name="using_area_2d"
 run/main_scene="res://World.tscn"
-config/features=PackedStringArray("4.0")
+config/features=PackedStringArray("4.7")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [importer_defaults]
 
@@ -38,6 +43,16 @@ texture={
 "svg/scale": 1.0
 }
 
+[input_devices]
+
+joypads/ignore_joypad_on_unfocused_application=true
+
 [physics]
 
+3d/physics_engine="Jolt Physics"
 2d/default_gravity=490.0
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
